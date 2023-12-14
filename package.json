@@ -1,0 +1,52 @@
+{
+  "name": "jotai-examples",
+  "version": "1.0.0",
+  "description": "Examples for [Jotai](https://jotai.org/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/jotai-examples.git"
+  },
+  "author": "Rick Beerendonk",
+  "license": "EUPL-1.2",
+  "bugs": {
+    "url": "https://github.com/rickbeerendonk/jotai-examples/issues"
+  },
+  "homepage": "https://github.com/rickbeerendonk/jotai-examples#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "eslint": "eslint . --ext .js,.jsx,.mjs --cache",
+    "eslint-fix": "eslint . --ext .js,.jsx,.mjs --cache --fix",
+    "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
+    "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
+    "start": "node ./server/server.js",
+    "validate": "npm run eslint && npm run prettier"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.50.0",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
+    "prettier": "3.0.3",
+    "rimraf": "5.0.1"
+  },
+  "dependencies": {
+    "@babel/core": "7.22.20",
+    "@babel/preset-env": "7.22.20",
+    "@babel/preset-react": "7.22.15",
+    "@babel/standalone": "7.22.20",
+    "core-js": "3.32.2",
+    "esbuild": "0.19.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "jotai": "2.1.0",
+    "serve": "14.2.1"
+  }
+}
